@@ -1,0 +1,29 @@
+CONFIG_NAME: 'DMGAN'
+
+DATASET_NAME: 'faces'
+DATA_DIR: '/content/FirstTrial-Faces-/data/faces'
+GPU_ID: 3
+WORKERS: 0
+
+B_VALIDATION: False
+TREE:
+    BRANCH_NUM: 3
+
+
+TRAIN:
+    FLAG: False
+    NET_G: '/content/FirstTrial-Faces-/models/netG_epoch_95.pth'
+    B_NET_D: False
+    BATCH_SIZE: 10
+    NET_E: '/content/FirstTrial-Faces-/DAMSMencoders/text_encoder55.pth'
+
+
+GAN:
+    DF_DIM: 32
+    GF_DIM: 64
+    Z_DIM: 100
+    R_NUM: 3
+
+TEXT:
+    EMBEDDING_DIM: 256
+    CAPTIONS_PER_IMAGE: 1
